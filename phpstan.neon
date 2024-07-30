@@ -1,0 +1,15 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    scanDirectories:
+        - src
+    bootstrapFiles:
+        - vendor/autoload.php
+        
+
+services:
+    -
+        class: PHPStan\Rules\Classes\ExistingClassesInClassImplementsRule
+        tags:
+            - phpstan.rules.rule
